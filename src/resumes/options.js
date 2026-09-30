@@ -1,7 +1,6 @@
-import yaml from 'js-yaml';
 import {
-    PERSON
-} from '../../resume/data.yml';
+    store
+} from '../store';
 import {
     terms
 } from '../terms';
@@ -12,11 +11,33 @@ function getVueOptions (name) {
         name: name,
         data () {
             return {
-                person: yaml.load(PERSON),
                 terms: terms,
             };
         },
+        methods: {
+            // skill/language level (0-100) as filled dots out of 5
+            dots (level) {
+                const n = Math.round((Number(level) || 0) / 20);
+                return Math.max(0, Math.min(5, n));
+            },
+            fullName () {
+                const n = this.person.name;
+                return [n.first, n.middle, n.last].filter(Boolean).join(' ');
+            },
+            withProtocol (url) {
+                if (!url) {
+                    return '';
+                }
+                return /^https?:\/\//.test(url) ? url : `https://${url}`;
+            },
+        },
         computed: {
+            person () {
+                return store.person;
+            },
+            photo () {
+                return store.photo;
+            },
             lang () {
                 const defaultLang = this.terms.en;
                 const useLang = this.terms[this.person.lang];
@@ -25,7 +46,6 @@ function getVueOptions (name) {
                 Object.keys(defaultLang)
                     .filter(k => !useLang[k])
                     .forEach(k => {
-                        console.log(k);
                         useLang[k] = defaultLang[k];
                     });
 
@@ -53,6 +73,14 @@ function getVueOptions (name) {
 
                 if(this.person.contact.linkedin) {
                     links.linkedin = `https://linkedin.com/in/${this.person.contact.linkedin}`;
+                }
+
+                if(this.person.contact.twitter) {
+                    links.twitter = `https://twitter.com/${this.person.contact.twitter}`;
+                }
+
+                if(this.person.contact.website) {
+                    links.website = this.withProtocol(this.person.contact.website);
                 }
 
                 if(this.person.contact.phone) {

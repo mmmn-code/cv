@@ -43,20 +43,25 @@ skills:
 - name: B2B Skills
   level: 75
 
-knowledge: "Languages: English, Hindi, French, Telugu.
-  Certifications: Project Management Professional (PMP), Project Management Institute (Feb 2017 - Mar 2017);
-  Google Analytics IQ Certification, Google (Jun 2015)."
+languages:
+- name: English
+  level: 100
+- name: Hindi
+  level: 80
+- name: French
+  level: 80
+- name: Telugu
+  level: 80
 
-projects:
+certifications:
 - name: Project Management Professional (PMP)
-  platform: Project Management Institute
+  issuer: Project Management Institute
   timeperiod: Feb 2017 - Mar 2017
-  description: Certification
-
 - name: Google Analytics IQ Certification
-  platform: Google
+  issuer: Google
   timeperiod: Jun 2015
-  description: Certification
+
+knowledge: "Languages: English, Hindi, French, Telugu. Certified PMP and Google Analytics IQ."
 
 contact:
   email: vaishnavikumar2595@gmail.com

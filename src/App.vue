@@ -26,4 +26,13 @@ body {
   overflow-x: hidden;
   background: #CCCCCC;
 }
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body { background: white; }
+}
 </style>

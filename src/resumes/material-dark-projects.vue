@@ -7,7 +7,7 @@
     <div class="section-headline">
       {{ lang.contact }}
     </div>
-    <div class="item">
+    <div v-if="person.birth" class="item">
       <div class="icon">
         <i class="material-icons">account_circle</i>
       </div>
@@ -535,7 +535,7 @@ h4 {
     }
 }
 #myselfpic {
-    background-image: url('../../resume/id.jpg');
+    background-image: var(--resume-photo);
     color: black;
 }
 #githubIcon {

@@ -5,7 +5,7 @@
         class="banner__fullname"
       >{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div
+      <div v-if="person.birth"
         class="banner__location"
       >{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
     </div>
@@ -218,7 +218,7 @@ export default Vue.component(name, getVueOptions(name));
   width: @picture-size;
   border-radius: 50%;
   border: 5px solid @accent-color;
-  content: url('../../resume/id.jpg');
+  content: var(--resume-photo);
   z-index: 2;
 }
 

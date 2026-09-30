@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
     </div>
 
     <div class="content">
@@ -224,7 +224,7 @@ a {
   width: @picture-size;
   border-radius: 50%;
   border: 5px solid @accent-color;
-  content: url('../../resume/id.jpg');
+  content: var(--resume-photo);
   z-index: 2;
 }
 
