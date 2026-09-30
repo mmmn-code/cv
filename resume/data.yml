@@ -1,0 +1,71 @@
+/* #*/ export const PERSON = `
+name:
+  first: Vaishnavi
+  middle:
+  last: Kumar
+about: Self-motivated and success-driven marketing manager with 3 years of experience in
+       solution selling and new business development. Eager to support Brigade Inc. with superb
+       knowledge including online marketing and value-added services.
+position: Marketing Manager
+
+experience:
+- company: Investone Pvt Ltd
+  position: Marketing Manager
+  timeperiod: Jul 2018 - Present
+  description: Developed and implemented new marketing and sales plans and defined the strategy
+    for the next 5 years and also worked on creation of competitive concepts.
+
+- company: ProfitAll Pvt Ltd
+  position: BD Associate
+  timeperiod: Jul 2017 - Jul 2018
+  description: Increased the customer satisfaction rate by 50% by improving the customer service
+    and also provided sales managers with tools necessary to monitor progress.
+
+education:
+- degree: Master of Business Administration (Sales and Marketing)
+  timeperiod: Aug 2015 - Jun 2017
+  description: IIMS University, Bangalore. Received a Master's Degree in Sales and Marketing with an excellent score.
+
+- degree: Bachelor of Business Management
+  timeperiod: Jun 2011 - Mar 2015
+  description: Grow Management College, Bangalore. Received a Bachelor's Degree in Management with an excellent score.
+
+# skill level goes from 0 to 100
+skills:
+- name: Communication Skills
+  level: 100
+- name: Interpersonal Skills
+  level: 100
+- name: Team Management
+  level: 100
+- name: Customer Application
+  level: 100
+- name: B2B Skills
+  level: 75
+
+knowledge: "Languages: English, Hindi, French, Telugu.
+  Certifications: Project Management Professional (PMP), Project Management Institute (Feb 2017 - Mar 2017);
+  Google Analytics IQ Certification, Google (Jun 2015)."
+
+projects:
+- name: Project Management Professional (PMP)
+  platform: Project Management Institute
+  timeperiod: Feb 2017 - Mar 2017
+  description: Certification
+
+- name: Google Analytics IQ Certification
+  platform: Google
+  timeperiod: Jun 2015
+  description: Certification
+
+contact:
+  email: vaishnavikumar2595@gmail.com
+  phone: "9876543210"
+  street: ""
+  city: Bangalore
+  website: www.vaishnavi2595.com
+  linkedin: vaishnavikumar2595
+  twitter: vaishnavikumar2595
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: en
+`
